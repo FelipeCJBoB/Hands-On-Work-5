@@ -43,7 +43,7 @@ O projeto foi construído sob o paradigma de **Aplicação de página sonora (SP
 ## 📂 Estrutura de Diretórios (SoC)
 
 A base de código segue o princípio de *Separação de Preocupações* (Separação de Responsabilidades):
-
+```texto
 /
 ├── ativos/img/ # Ativos otimizados (WebP) com tratamento de fallback
 ├── css/
@@ -59,10 +59,11 @@ A base de código segue o princípio de *Separação de Preocupações* (Separa�
 │ └── serviços/
 │ └── CartService.js # Lógica de negação e persistência local
 └── index.html # Shell da aplicação contendo os templates
+```
 
 ##⚙️ Como Executar o Projeto 
 Visualizar em Produção:
-O sistema está acessível publicamente através do link: https://hands-on-work-5.vercel.app/#home 
+O sistema está acessível publicamente ao link: https://hands-on-work-5.vercel.app/#home 
 
 Executar Localmente:
 Para utilizar módulos ES6 (importação/exportação), o projeto requer um servidor HTTP local para funcionar corretamente (evitando blocos de CORS do protocolo file://).
