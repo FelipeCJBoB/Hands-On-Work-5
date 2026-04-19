@@ -1,42 +1,48 @@
-💡 Hands On Work V (HOW V) - Plataforma E-commerce NaveLuz
-Este projeto foi desenvolvido como requisito para a disciplina de Hands on Work V do curso de Análise e Desenvolvimento de Sistemas (ADS) na Univali - Campus Itajaí. O objetivo central foi projetar e implementar a transformação digital da NaveLuz Comércio de Materiais Elétricos, elevando a marca de um retalho local para um patamar institucional e digital.
+# 💡 Hands On Work V (HOW V) - Plataforma E-commerce NaveLuz
 
-🏢 Sobre a NaveLuz e o Desafio
+![Status](https://img.shields.io/badge/Status-Concluido-success)
+![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)
+![Tech](https://img.shields.io/badge/Stack-Vanilla_JS_%7C_Tailwind-blue)
+
+Este projeto foi desenvolvido como requisito para a disciplina de **Hands on Work V** do curso de Análise e Desenvolvimento de Sistemas (ADS) na **Univali - Campus Itajaí**. O objetivo central foi projetar e implementar a transformação digital da **NaveLuz Comércio de Materiais Elétricos**, elevando a marca de um retalho local para um patamar institucional e digital.
+
+---
+
+## 🏢 Sobre a NaveLuz e o Desafio
 A NaveLuz é uma loja tradicional de materiais elétricos e de construção. O projeto nasceu da necessidade de modernizar a operação comercial da empresa, que até então dependia estritamente do fluxo presencial de clientes.
 
-O Problema: A empresa enfrentava desafios com processos manuais e não possuía um catálogo online, o que limitava o seu alcance no mercado atual.
-A Solução: Desenvolvimento de uma plataforma web focada em conversão, com catálogo dinâmico (PLP), simulação de checkout para pagamentos digitais e um painel de telemetria administrativa.
+**O Problema:** A empresa enfrentava desafios com processos manuais e não possuía um catálogo online, o que limitava o seu alcance no mercado atual.
+**A Solução:** Desenvolvimento de uma plataforma web focada em conversão, com catálogo dinâmico (PLP), simulação de checkout para pagamentos digitais e um painel de telemetria administrativa.
 
-🚀 Arquitetura e Tecnologias
-O projeto foi construído sob o paradigma de Single Page Application (SPA), estruturado de forma nativa (Vanilla) para demonstrar domínio absoluto sobre a manipulação do DOM e roteamento assíncrono.
+---
 
-HTML5 Semântico: Estruturação baseada em templates para renderização dinâmica no cliente.
+## 🚀 Arquitectura e Tecnologias
 
-CSS3 & Tailwind CSS: Estilização via JIT Compiler, garantindo um design Mobile-First e paleta institucional.
+O projeto foi construído sob o paradigma de **Single Page Application (SPA)**, estruturado de forma nativa (Vanilla) para demonstrar domínio absoluto sobre a manipulação do DOM e roteamento assíncrono.
 
-JavaScript (ES6+): Arquitetura modular (Controllers, Services, Core Routing).
+* **HTML5 Semântico:** Estruturação baseada em templates para renderização dinâmica no cliente.
+* **CSS3 & Tailwind CSS:** Estilização via JIT Compiler, garantindo um design Mobile-First e paleta institucional.
+* **JavaScript (ES6+):** Arquitectura modular (Controllers, Services, Core Routing).
+* **Gestão de Estado:** Uso de Local Storage para persistência de dados do carrinho.
+* **Simulação de Back-end:** Consumo de dados assíncrono via Promises.
+* **Alojamento (CI/CD):** Deploy automatizado na Vercel.
 
-Gestão de Estado: Uso de Local Storage para persistência de dados do carrinho.
+---
 
-Simulação de Back-end: Consumo de dados assíncrono via Promises.
+## ✨ Funcionalidades Principais
 
-Hospedagem (CI/CD): Deploy automatizado na Vercel.
+* **Motor de Roteamento Customizado:** Navegação instantânea sem recarregamento de página.
+* **Product Listing Page (PLP):** Catálogo avançado com motor de filtragem reativo.
+* **Carrinho de Compras:** Gestão de itens off-canvas com cálculos de subtotais em tempo real.
+* **Simulação de Checkout:** Fluxo completo com formulários validados.
+* **Micro-interações:** Animações de Scroll Reveal.
+* **Dashboard Administrativo:** Interface de gestão com indicadores de desempenho e controlo de stock simulado.
 
-✨ Funcionalidades Principais
-Motor de Roteamento Customizado: Navegação instantânea sem recarregamento de página.
+---
 
-Product Listing Page (PLP): Catálogo avançado com motor de filtragem reativo.
+## 📂 Estrutura de Diretórios (SoC)
 
-Carrinho de Compras: Gestão de itens off-canvas com cálculos de subtotais em tempo real.
-
-Simulação de Checkout: Fluxo completo com formulários validados.
-
-Micro-interações: Animações de Scroll Reveal.
-
-Dashboard Administrativo: Interface de gestão com indicadores de desempenho e controle de estoque simulado.
-
-📂 Estrutura de Diretórios (SoC)
-A base de código segue o princípio de Separação de Responsabilidades (Separation of Concerns):
+A base de código segue o princípio de Separação de Responsabilidades (*Separation of Concerns*):
 
 ```text
 /
@@ -48,7 +54,7 @@ A base de código segue o princípio de Separação de Responsabilidades (Separa
 │   ├── core/
 │   │   └── Router.js    # Motor de roteamento
 │   ├── controllers/
-│   │   └── ViewControllers.js # Ciclo de vida das views
+│   │   └── ViewControllers.js # Ciclo de vida dos ecrãs
 │   ├── data/
 │   │   └── mockDatabase.js    # Simulação de API e dados
 │   └── services/
