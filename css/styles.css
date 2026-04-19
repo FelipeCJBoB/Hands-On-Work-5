@@ -1,0 +1,76 @@
+/* ── Global Reset ────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+:root { scroll-behavior: smooth; }
+
+/* ── View transition animation ───────────────── */
+#app-root > * {
+  animation: viewFadeIn .22s ease-out both;
+}
+@keyframes viewFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Off-canvas Cart ────────────────────────── */
+#cart-sidebar {
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+#cart-sidebar.open { transform: translateX(0); }
+
+#cart-overlay {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+#cart-overlay.open { opacity: 1; pointer-events: all; }
+
+/* ── Admin sidebar link states ───────────────── */
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .625rem .75rem;
+  border-radius: .5rem;
+  font-size: .875rem;
+  color: #809490;
+  font-weight: 500;
+  transition: background .2s, color .2s;
+  text-decoration: none;
+}
+.admin-nav-item:hover:not(.active) { background: #243858; color: #fff; }
+.admin-nav-item.active { background: #1B2A41; border: 1px solid #C5A059; color: #C5A059; }
+
+/* ── Product tab active ──────────────────────── */
+.tab-btn { transition: color .2s, border-color .2s; }
+.tab-btn.tab-active {
+  color: #1B2A41;
+  border-bottom-color: #1B2A41 !important;
+}
+
+/* ── Custom scrollbar ────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #FBF9FA; }
+::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 3px; }
+
+/* ── Ensure body fills screen ────────────────── */
+html, body { min-height: 100%; }
+
+/* Screen-reader only — legendas em <fieldset> do checkout (Tailwind JIT pode não ver strings em .js). */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Destaque de campo inválido no checkout (não depende do scan JIT do Tailwind em app.js). */
+.checkout-field-error {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
