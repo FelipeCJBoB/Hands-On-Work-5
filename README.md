@@ -63,12 +63,13 @@ A base de código segue o princípio de *Separação de Preocupações* (Separa�
 
 ##⚙️ Como Executar o Projeto 
 Visualizar em Produção:
-O sistema está acessível publicamente ao link: https://hands-on-work-5.vercel.app/#home 
+O sistema está acessível publicamente ao link: 
+https://hands-on-work-5.vercel.app/#home 
 
 Executar Localmente:
 Para utilizar módulos ES6 (importação/exportação), o projeto requer um servidor HTTP local para funcionar corretamente (evitando blocos de CORS do protocolo file://).
 Faça o clone do repositório:
-clone git https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+clonar git (https://github.com/FelipeCJBoB/Hands-On-Work-5)
 Abra uma massa sem VS Code.
 Utilize uma extensão Live Server (ou similar) no arquivo index.html.
 
